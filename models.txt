@@ -1,0 +1,42 @@
+User Table
+
+name
+pwd
+type: admin/general
+
+Trnasaction Table
+
+id
+t_name
+t_type
+t_date (can be string or date)
+s_city
+d_city
+description 
+*Artificial attributes
+internal_status- [requested,quoted,paid]
+delivery_status- [inprocess(default),processed at src,dispatched at src,in transit, arrived at destination, out for delivery, dilevered] (done after the payment is done)
+amount
+delivery_date
+user_id
+
+City Table
+
+id
+city_name
+
+
+user will be connected to many transaction 
+but one transaction will have only one user
+               <---one---many--->
+
+conversion of str to time: datetime.datetime(2024,02,23) object of date created
+
+User login- general
+            admin
+
+admin endpoint
+general user endpoint
+
+/admin
+/user/id - dynamic using coverter < >
